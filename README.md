@@ -15,8 +15,8 @@ names are correct; don't rename the files.
 
 ## 1. Install
 
-You need a **C++ project** (if yours is Blueprint-only, add any C++ class once: *Tools > New C++ Class*) and
-Visual Studio with the "Game development with C++" workload.
+Works in Blueprint-only and C++ projects. You need Visual Studio with the "Game development with C++" workload,
+because the plugin is built from source the first time.
 
 1. Close the editor.
 2. Copy this folder into your project's `Plugins` folder as `GameplayMessageRouter` (make the `Plugins` folder if it
@@ -28,8 +28,8 @@ Visual Studio with the "Game development with C++" workload.
        GameplayMessageRouter/
          GameplayMessageRouter.uplugin
    ```
-3. Right-click `MyProject.uproject` > **Generate Visual Studio project files**, then open the project. Click **Yes**
-   when it asks to rebuild the missing modules.
+3. Open the project. Click **Yes** when it asks to rebuild the missing modules. (In a C++ project you can instead
+   right-click `MyProject.uproject` > **Generate Visual Studio project files** and build from Visual Studio.)
 
 The plugin is enabled by default. It also turns on the engine's **GameplayTagsEditor** plugin.
 
