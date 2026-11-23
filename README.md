@@ -15,6 +15,22 @@ names are correct; don't rename the files.
 
 ## 1. Install
 
+### With the VFS Unreal Project Build Tool (recommended)
+
+1. Open the [VFS Unreal Project Build Tool](https://github.com/vfs-sct/VFS_Unreal_Project_Renamer) and pick your
+   project's `.uproject` under **Project**.
+2. **Action:** Import Plugin. **Plugin:** Gameplay Message Subsystem. **On Finish Success:** Build Solution.
+3. Click **Import** and confirm.
+
+That's all. The tool downloads the plugin into `Plugins/GameplayMessageRouter`, regenerates the Visual Studio
+project files, builds, and opens the editor, so you skip every step of the manual install below. Check the yellow
+**CHECK IN UNREAL EDITOR** list at the end of the log.
+
+The tool only imports into C++ projects. For a Blueprint-only project, install by hand (below), or add any C++
+class once (*Tools > New C++ Class*) and use the tool.
+
+### By hand
+
 Works in Blueprint-only and C++ projects. You need Visual Studio with the "Game development with C++" workload,
 because the plugin is built from source the first time.
 
