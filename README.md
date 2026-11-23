@@ -15,37 +15,16 @@ names are correct; don't rename the files.
 
 ## 1. Install
 
-### With the VFS Unreal Project Build Tool (recommended)
+Install it with the [VFS Unreal Project Build Tool](https://github.com/vfs-sct/VFS_Unreal_Project_Renamer):
 
-1. Open the [VFS Unreal Project Build Tool](https://github.com/vfs-sct/VFS_Unreal_Project_Renamer) and pick your
-   project's `.uproject` under **Project**.
+1. Open the tool and pick your project's `.uproject` under **Project**.
 2. **Action:** Import Plugin. **Plugin:** Gameplay Message Subsystem. **On Finish Success:** Build Solution.
 3. Click **Import** and confirm.
 
 That's all. The tool downloads the plugin into `Plugins/GameplayMessageRouter`, regenerates the Visual Studio
-project files, builds, and opens the editor, so you skip every step of the manual install below. Check the yellow
-**CHECK IN UNREAL EDITOR** list at the end of the log.
+project files, builds, and opens the editor. Check the yellow **CHECK IN UNREAL EDITOR** list at the end of the log.
 
-The tool only imports into C++ projects. For a Blueprint-only project, install by hand (below), or add any C++
-class once (*Tools > New C++ Class*) and use the tool.
-
-### By hand
-
-Works in Blueprint-only and C++ projects. You need Visual Studio with the "Game development with C++" workload,
-because the plugin is built from source the first time.
-
-1. Close the editor.
-2. Copy this folder into your project's `Plugins` folder as `GameplayMessageRouter` (make the `Plugins` folder if it
-   doesn't exist):
-   ```
-   MyProject/
-     MyProject.uproject
-     Plugins/
-       GameplayMessageRouter/
-         GameplayMessageRouter.uplugin
-   ```
-3. Open the project. Click **Yes** when it asks to rebuild the missing modules. (In a C++ project you can instead
-   right-click `MyProject.uproject` > **Generate Visual Studio project files** and build from Visual Studio.)
+The project must be a C++ project (if yours is Blueprint-only, add any C++ class once: *Tools > New C++ Class*).
 
 The plugin is enabled by default. It also turns on the engine's **GameplayTagsEditor** plugin.
 
